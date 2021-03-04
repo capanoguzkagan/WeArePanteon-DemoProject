@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class FinishController : MonoBehaviour
 {
+	public event System.Action FinishEvent;
 	private void OnTriggerEnter(Collider other)
 	{
 		PlayerController _player = other.GetComponent<PlayerController>();
 		if (_player!=null)
 		{
-			Debug.Log("bitti abi");
+			FinishEvent?.Invoke();
 		}
 	}
 }
