@@ -10,6 +10,7 @@ public class FinishController : MonoBehaviour
 		PlayerController _player = other.GetComponent<PlayerController>();
 		if (_player!=null)
 		{
+			_player.enabled = false;
 			FinishEvent?.Invoke();
 		}
 	}
