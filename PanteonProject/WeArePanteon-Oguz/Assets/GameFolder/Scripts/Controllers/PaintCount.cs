@@ -12,7 +12,6 @@ public class PaintCount : MonoBehaviour
 	float i;
 	private void Awake()
 	{
-
 		_counter = GetComponent<P3dChangeCounter>();
 	}
 	private void Update()

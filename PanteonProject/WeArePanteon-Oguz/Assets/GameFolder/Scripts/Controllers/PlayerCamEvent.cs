@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCamEvent : MonoBehaviour
 {
+	[SerializeField] GameObject _percentText;
 	FinishController _event;
 	BrushController _brushController;
 	private void Awake()
@@ -26,5 +27,6 @@ public class PlayerCamEvent : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		this.gameObject.SetActive(false);
 		_brushController.enabled = true;
+		_percentText.SetActive(true);
 	}
 }
