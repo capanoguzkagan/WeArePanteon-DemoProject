@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerCamEvent : MonoBehaviour
 {
 	FinishController _event;
+	BrushController _brushController;
 	private void Awake()
 	{
-		_event =FindObjectOfType<FinishController>();
+		_event = FindObjectOfType<FinishController>();
+		_brushController = FindObjectOfType<BrushController>();
 	}
 
 	private void OnEnable()
@@ -17,6 +19,12 @@ public class PlayerCamEvent : MonoBehaviour
 
 	private void HandleFinishEvent()
 	{
+		StartCoroutine(Delay());
+	}
+	IEnumerator Delay()
+	{
+		yield return new WaitForSeconds(1f);
 		this.gameObject.SetActive(false);
+		_brushController.enabled = true;
 	}
 }
