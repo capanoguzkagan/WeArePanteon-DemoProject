@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
 	private Player playerInput;
 	private Animator _anim;
 	private Rigidbody _rb;
+	private PlayerController _player;
 	private void Awake()
 	{
 		playerInput = new Player();
 		_rb = GetComponent<Rigidbody>();
 		_anim = GetComponentInChildren<Animator>();
+		_player = GetComponent<PlayerController>();
 
 	}
 	private void OnEnable()
@@ -53,10 +55,16 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.gameObject.tag=="MovingObject")
 		{
-			this.enabled = false;
-			_anim.SetTrigger("Impact");
-			this.enabled = true;
+			_anim.SetBool("Impact",true);
+			_player.enabled = false;
+			StartCoroutine(AnimDelay());
 		}
+	}
+	IEnumerator AnimDelay()
+	{
+		yield return new WaitForSeconds(0.5f);
+		_player.enabled = true;
+		_anim.SetBool("Impact", false);
 	}
 }
 
