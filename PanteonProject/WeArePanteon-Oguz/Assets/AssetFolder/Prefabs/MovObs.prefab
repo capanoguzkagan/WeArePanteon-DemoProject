@@ -104,11 +104,11 @@ GameObject:
   - component: {fileID: 6917417484153826846}
   - component: {fileID: 7516579349485560251}
   - component: {fileID: 5743415887806813553}
-  - component: {fileID: 6103584904222667938}
   - component: {fileID: 6103584904222667939}
+  - component: {fileID: 1810520018645677273}
   m_Layer: 0
   m_Name: HorizontalObstacle
-  m_TagString: Untagged
+  m_TagString: MovingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,20 +174,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &6103584904222667938
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6103584904222667940}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.047330894
-  m_Height: 0.25618502
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6103584904222667939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +190,16 @@ MonoBehaviour:
   _positions:
   - {fileID: 2148602426507124732}
   - {fileID: 2148602426287298695}
+--- !u!65 &1810520018645677273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103584904222667940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09466179, y: 0.25618502, z: 0.09322367}
+  m_Center: {x: 0, y: 0, z: 0}

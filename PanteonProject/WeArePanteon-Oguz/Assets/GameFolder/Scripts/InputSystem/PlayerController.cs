@@ -6,15 +6,12 @@ public class PlayerController : MonoBehaviour
 {
 	[SerializeField] private float playerSpeed = 2.0f;
 	private Player playerInput;
-	private CharacterController controller;
-	private Vector3 playerVelocity;
-	private bool groundedPlayer;
-	private float gravityValue = -9.81f;
 	private Animator _anim;
+	private Rigidbody _rb;
 	private void Awake()
 	{
 		playerInput = new Player();
-		controller = GetComponent<CharacterController>();
+		_rb = GetComponent<Rigidbody>();
 		_anim = GetComponentInChildren<Animator>();
 
 	}
@@ -29,33 +26,37 @@ public class PlayerController : MonoBehaviour
 	void Update()
 	{
 		Movement();
+
+
 	}
 	private void Movement()
 	{
-			groundedPlayer = controller.isGrounded;
-			if (groundedPlayer && playerVelocity.y < 0)
-			{
-				playerVelocity.y = 0f;
-			}
-			Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-			Vector3 move = new Vector3(movementInput.x, 0f, movementInput.y);
-			controller.Move(move * Time.deltaTime * playerSpeed);
+		Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
+		Vector3 move = new Vector3(movementInput.x, 0f, movementInput.y);
+		_rb.velocity = move * playerSpeed;
 
-			if (move != Vector3.zero)
-			{
+		if (move != Vector3.zero)
+		{
 			_anim.SetBool("Trigger", true);
 			gameObject.transform.forward = move;
-			}
-			else
-			{
+		}
+		else
+		{
 			_anim.SetBool("Trigger", false);
 		}
-			playerVelocity.y += gravityValue * Time.deltaTime;
-			controller.Move(playerVelocity * Time.deltaTime);
 	}
 	public void VictoryAnim()
 	{
 		_anim.Play("Victory");
+	}
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.tag=="MovingObject")
+		{
+			this.enabled = false;
+			_anim.SetTrigger("Impact");
+			this.enabled = true;
+		}
 	}
 }
 
