@@ -6,18 +6,23 @@ using UnityEngine.UI;
 
 public class PaintCount : MonoBehaviour
 {
-	[SerializeField] Text _text;
-	P3dChangeCounter _counter;
+	[SerializeField] P3dChangeCounter _counter ;
+	[SerializeField] Image _fillImage;
+
+	Text _text;
 	int _iValue;
+	float _fillValue;
 	float i;
 	private void Awake()
 	{
-		_counter = GetComponent<P3dChangeCounter>();
+		_text = GetComponentInChildren<Text>();
 	}
 	private void Update()
 	{
 		i = _counter.Ratio * 100;
 		_iValue = 100-(int)i;
+		_fillValue = (100 - i)/100;
 		_text.text =_iValue.ToString()+"%";
+		_fillImage.fillAmount =_fillValue;
 	}
 }

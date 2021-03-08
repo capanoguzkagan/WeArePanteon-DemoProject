@@ -17,7 +17,7 @@ public class PushingMechanic : MonoBehaviour
 				rb.AddTorque(transform.up * _pushForce);
 
 			else
-				rb.AddForce(Vector3.right * _pushForce);
+				rb.AddRelativeForce(Vector3.back * _pushForce*Time.deltaTime);	
 		}
 	}
 }
