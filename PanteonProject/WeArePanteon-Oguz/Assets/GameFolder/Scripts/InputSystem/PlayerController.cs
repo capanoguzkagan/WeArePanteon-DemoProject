@@ -53,14 +53,29 @@ public class PlayerController : MonoBehaviour
 	}
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag=="MovingObject")
+		NavAgentController _opponent = other.GetComponent<NavAgentController>();
+		if (other.gameObject.tag=="Obstacle")
 		{
 			_anim.SetBool("Impact",true);
 			_player.enabled = false;
 			StartCoroutine(AnimDelay());
 		}
+		if (_opponent!=null)
+		{
+			_anim.SetBool("Impact", true);
+			_player.enabled = false;
+			StartCoroutine(Impact());
+			_opponent.Impact();
+		}
 	}
 	IEnumerator AnimDelay()
+	{
+		yield return new WaitForSeconds(0.5f);
+		_player.enabled = true;
+		_anim.SetBool("Impact", false);
+		this.transform.position = new Vector3(0, 0.0063f, 0);
+	}
+	IEnumerator Impact()
 	{
 		yield return new WaitForSeconds(0.5f);
 		_player.enabled = true;
