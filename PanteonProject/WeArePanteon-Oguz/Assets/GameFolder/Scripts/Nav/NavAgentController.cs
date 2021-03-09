@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class NavAgentController : MonoBehaviour
 {
-	[SerializeField] Transform _finishPoint;
 	[SerializeField] Transform _StartPoint;
 	NavMeshAgent _nMesh;
 	Animator _anim;
@@ -14,7 +13,7 @@ public class NavAgentController : MonoBehaviour
 	{
 		_anim = GetComponentInChildren<Animator>();
 		_nMesh= GetComponent<NavMeshAgent>();
-		_nMesh.destination = _finishPoint.transform.position;
+		_nMesh.destination = new Vector3(0, 0, 6.5f); 
 	}
 
 	// Update is called once per frame
@@ -36,9 +35,7 @@ public class NavAgentController : MonoBehaviour
 		}		
 		if (_finish!=null)
 		{
-			_nMesh.speed = 0;
-			_nMesh.enabled = false;
-			_anim.Play("Victory");
+			StartCoroutine(Finish());
 
 		}
 		if (_opponent!=null)
@@ -61,7 +58,7 @@ public class NavAgentController : MonoBehaviour
 		_anim.SetBool("Impact", false);
 		this.transform.position = _StartPoint.transform.position;
 		_nMesh.enabled = true;
-		_nMesh.destination = _finishPoint.transform.position;
+		_nMesh.destination =new Vector3 (0,0,6.5f);
 	}
 	IEnumerator ImpactPlayer()
 	{
@@ -69,6 +66,13 @@ public class NavAgentController : MonoBehaviour
 		_nMesh.speed = 0.3f;
 		_anim.SetBool("Impact", false);
 		_nMesh.enabled = true;
-		_nMesh.destination = _finishPoint.transform.position;
+		_nMesh.destination = new Vector3(0, 0, 6.5f); 
+	}
+	IEnumerator Finish()
+	{
+		yield return new WaitForSeconds(0.75f);
+		_nMesh.speed = 0;
+		_nMesh.enabled = false;
+		_anim.Play("Victory");
 	}
 }

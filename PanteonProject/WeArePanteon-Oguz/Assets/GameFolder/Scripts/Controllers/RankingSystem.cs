@@ -7,9 +7,8 @@ public class RankingSystem : MonoBehaviour
 {
 	[SerializeField] GameObject[] _components;
 	[SerializeField] GameObject _player;
-
+	public int _currentRank;
 	Text _rankText;
-	int _currentRank;
 	int _rankPlayer;
 
 	private void Awake()

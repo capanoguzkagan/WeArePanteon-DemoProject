@@ -9,11 +9,14 @@ public class PlayerCamEvent : MonoBehaviour
 	FinishController _event;
 	BrushController _brushController;
 	IntroductionController _intro;
+	RankingSystem _rankSystem;
 	private void Awake()
 	{
 		_event = FindObjectOfType<FinishController>();
 		_brushController = FindObjectOfType<BrushController>();
 		_intro = FindObjectOfType<IntroductionController>();
+		_rankSystem = FindObjectOfType<RankingSystem>();
+		
 	}
 
 	private void OnEnable()
@@ -23,6 +26,7 @@ public class PlayerCamEvent : MonoBehaviour
 
 	private void HandleFinishEvent()
 	{
+		_rankSystem.enabled = false;
 		StartCoroutine(Delay());
 	}
 	IEnumerator Delay()
