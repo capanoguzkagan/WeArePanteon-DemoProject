@@ -11,8 +11,6 @@ public class ExplosionController : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		Explosion();
-		Debug.Log("Bumcu Onur");
-
 	}
 	private void Explosion()
 	{

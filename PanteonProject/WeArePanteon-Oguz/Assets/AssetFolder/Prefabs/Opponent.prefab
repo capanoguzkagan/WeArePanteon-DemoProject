@@ -240,7 +240,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000000998372, y: 0.004465346, z: 0.00020808511}
+  m_ConnectedAnchor: {x: 4.9610684e-11, y: 0.0044653383, z: 0.00020807737}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -265,8 +265,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -380,7 +380,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000015963453, y: 0.0029930354, z: -0.00000006292249}
+  m_ConnectedAnchor: {x: -7.6761364e-10, y: 0.002993015, z: 1.7462301e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -405,8 +405,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -550,7 +550,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0028143027, y: 0.0036262525, z: -0.00013328815}
+  m_ConnectedAnchor: {x: 0.0028142878, y: 0.0036262462, z: -0.00013326237}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -575,8 +575,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -824,7 +824,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000002450179, y: 0.0029930207, z: -0.000000066473156}
+  m_ConnectedAnchor: {x: 0.0000000035506678, y: 0.0029930135, z: -5.8207666e-10}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -849,8 +849,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1154,7 +1154,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000163418, y: 0.0025383034, z: -0.000000074098274}
+  m_ConnectedAnchor: {x: -0.0000000011959855, y: 0.0025383052, z: 0.0000000012805672}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1179,8 +1179,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1262,7 +1262,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000009821493, y: 0.0027642797, z: -0.00023616894}
+  m_ConnectedAnchor: {x: -1.1262824e-10, y: 0.0027642816, z: -0.00023619781}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1287,8 +1287,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1466,7 +1466,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000034960976, y: 0.002538304, z: -0.000000073574455}
+  m_ConnectedAnchor: {x: 0.0000000011577868, y: 0.002538306, z: -4.656611e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1491,8 +1491,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1722,7 +1722,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0019720693, y: -0.000009053269, z: 0.0003608888}
+  m_ConnectedAnchor: {x: -0.0019720742, y: -0.000009042385, z: 0.00036093217}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1747,8 +1747,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1831,7 +1831,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0019720895, y: -0.000009053269, z: 0.00036088694}
+  m_ConnectedAnchor: {x: 0.0019720746, y: -0.000009042385, z: 0.0003609303}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1856,8 +1856,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1940,7 +1940,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0028142831, y: 0.0036262518, z: -0.00013328684}
+  m_ConnectedAnchor: {x: -0.0028142831, y: 0.0036262495, z: -0.00013326103}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1965,8 +1965,8 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
+  m_EnableProjection: 1
+  m_ProjectionDistance: 0.001
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
