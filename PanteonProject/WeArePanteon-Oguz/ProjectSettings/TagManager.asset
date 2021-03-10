@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Percent
   - Obstacle
+  - ObstacleExp
   layers:
   - Default
   - TransparentFX

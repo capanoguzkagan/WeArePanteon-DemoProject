@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class NavAgentController : MonoBehaviour
 {
 	[SerializeField] Transform _StartPoint;
+	[SerializeField] GameObject _ragdollObject;
+	private RagdollController _ragdoll;
 	NavMeshAgent _nMesh;
 	Animator _anim;
 	float _speedID;
@@ -13,7 +15,12 @@ public class NavAgentController : MonoBehaviour
 	{
 		_anim = GetComponentInChildren<Animator>();
 		_nMesh= GetComponent<NavMeshAgent>();
-		_nMesh.destination = new Vector3(0, 0, 6.5f); 
+		_nMesh.destination = new Vector3(0, 0, 6.5f);
+		_ragdoll = GetComponent<RagdollController>();
+	}
+	private void Start()
+	{
+		_ragdollObject.SetActive(false);
 	}
 
 	// Update is called once per frame
@@ -32,7 +39,15 @@ public class NavAgentController : MonoBehaviour
 			StartCoroutine(AnimDelay());
 			_nMesh.speed = 0;
 			_nMesh.enabled = false;
-		}		
+		}
+		if (other.gameObject.tag == "ObstacleExp")
+		{
+			_nMesh.speed = 0;
+			_nMesh.enabled = false;
+			_anim.enabled = false;
+			_ragdollObject.SetActive(true);
+			StartCoroutine(Explosion());
+		}
 		if (_finish!=null)
 		{
 			StartCoroutine(Finish());
@@ -74,5 +89,16 @@ public class NavAgentController : MonoBehaviour
 		_nMesh.speed = 0;
 		_nMesh.enabled = false;
 		_anim.Play("Victory");
+	}
+	IEnumerator Explosion()
+	{
+		yield return new WaitForSeconds(1f);
+		_nMesh.enabled = true;
+		_nMesh.speed = 0.3f;
+		_ragdoll.ResetRagdoll();
+		_ragdollObject.SetActive(false);
+		_anim.enabled = true;
+		_nMesh.destination = new Vector3(0, 0, 6.5f);
+
 	}
 }

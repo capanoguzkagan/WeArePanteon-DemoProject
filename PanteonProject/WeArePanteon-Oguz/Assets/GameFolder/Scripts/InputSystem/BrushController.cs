@@ -36,14 +36,9 @@ public class BrushController : MonoBehaviour
 			controller.Move(move * Time.deltaTime * playerSpeed);
 	
 			if (Input.GetMouseButtonDown(0))
-			{
 			controller.Move(moving);
-			}
 			if (Input.GetMouseButtonUp(0))
-			{
 			controller.Move((-1)*moving);
-		}
 	}
-	
 }
 

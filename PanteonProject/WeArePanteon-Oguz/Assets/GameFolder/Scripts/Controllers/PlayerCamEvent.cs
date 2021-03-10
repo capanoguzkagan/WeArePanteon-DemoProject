@@ -10,6 +10,7 @@ public class PlayerCamEvent : MonoBehaviour
 	BrushController _brushController;
 	IntroductionController _intro;
 	RankingSystem _rankSystem;
+
 	private void Awake()
 	{
 		_event = FindObjectOfType<FinishController>();
